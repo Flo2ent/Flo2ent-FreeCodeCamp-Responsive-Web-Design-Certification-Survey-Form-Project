@@ -1,0 +1,19 @@
+{
+  "name": "flo2ent-freecodecamp-responsive-web-design-certification-survey-form-project",
+  "version": "0.1.0",
+  "description": "My \"Survey Form\" project for the FreeCodeCamp's Responsive Web Design Certification.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flo2ent/Flo2ent-FreeCodeCamp-Responsive-Web-Design-Certification-Survey-Form-Project.git"
+  },
+  "author": "Flo2ent",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Flo2ent/Flo2ent-FreeCodeCamp-Responsive-Web-Design-Certification-Survey-Form-Project/issues"
+  },
+  "homepage": "https://github.com/Flo2ent/Flo2ent-FreeCodeCamp-Responsive-Web-Design-Certification-Survey-Form-Project#readme"
+}
