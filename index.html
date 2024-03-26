@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Survey Form</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <!-- Defered CSS -->
+    <link
+      rel="preload"
+      href="styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="styles.css" />
+    </noscript>
+  </head>
+  <body>
+    <main class="c-main" role="main" aria-labelledby="title">
+      <!-- Header -->
+      <header class="c-header">
+        <h1 class="c-header__title" id="title">Survey Form</h1>
+        <p class="c-header__sub-title" id="description">
+          Thank you for taking the time to help us improve our services.
+        </p>
+      </header>
+      <form class="c-form" id="survey-form" action="" method="post">
+        <!-- Personal information -->
+        <fieldset class="c-form__section">
+          <legend class="c-form__section-title">Personal information</legend>
+          <!-- First name -->
+          <div class="c-form__field-ctn">
+            <label for="first-name" class="c-form__field-ctn__label"
+              >First name</label
+            >
+            <input
+              class="c-form__field-ctn__field"
+              type="text"
+              name="first_name"
+              id="first-name"
+              inputmode="text"
+              placeholder="John"
+            />
+          </div>
+          <!-- Last name -->
+          <div class="c-form__field-ctn">
+            <label id="name-label" for="name" class="c-form__field-ctn__label"
+              >Last name</label
+            >
+            <input
+              class="c-form__field-ctn__field"
+              type="text"
+              name="name"
+              id="name"
+              inputmode="text"
+              placeholder="Doe"
+              required
+            />
+          </div>
+          <!-- Email -->
+          <div class="c-form__field-ctn">
+            <label id="email-label" for="email" class="c-form__field-ctn__label"
+              >Email</label
+            >
+            <input
+              class="c-form__field-ctn__field"
+              type="email"
+              name="email"
+              id="email"
+              inputmode="email"
+              placeholder="john.doe@example.com"
+              required
+            />
+          </div>
+          <div class="c-form__field-ctn">
+            <label
+              id="number-label"
+              for="number"
+              class="c-form__field-ctn__label"
+              >Age <span class="u-i">(optional)</span></label
+            >
+            <input
+              class="c-form__field-ctn__field"
+              type="number"
+              name="number"
+              id="number"
+              min="13"
+              max="120"
+              inputmode="numeric"
+              placeholder="37"
+            />
+          </div>
+        </fieldset>
+        <!-- Services -->
+        <fieldset class="c-form__section">
+          <legend class="c-form__section-title">Services</legend>
+          <p>Which services do you use?</p>
+          <!-- Service A -->
+          <div class="c-form__field-ctn">
+            <input type="checkbox" id="service-a" value="service-a" />
+            <label for="service-a" class="c-form__field-ctn__label"
+              >Service A</label
+            >
+          </div>
+          <!-- Service B -->
+          <div class="c-form__field-ctn">
+            <input type="checkbox" id="service-b" value="service-b" />
+            <label for="service-b" class="c-form__field-ctn__label"
+              >Service B</label
+            >
+          </div>
+          <!-- Service C -->
+          <div class="c-form__field-ctn">
+            <input type="checkbox" id="service-c" value="service-c" />
+            <label for="service-c" class="c-form__field-ctn__label"
+              >Service C</label
+            >
+          </div>
+        </fieldset>
+        <!-- Rating -->
+        <fieldset class="c-form__section">
+          <legend class="c-form__section-title">Rating</legend>
+          <p>Which note would you give to our services?</p>
+          <div class="c-form__field-ctn">
+            <input
+              type="radio"
+              name="rating"
+              value="rating-5"
+              id="rating-5"
+              checked
+            />
+            <label for="rating-5" class="c-form__field-ctn__label">5</label>
+          </div>
+          <div class="c-form__field-ctn">
+            <input type="radio" name="rating" value="rating-4" id="rating-4" />
+            <label for="rating-4" class="c-form__field-ctn__label">4</label>
+          </div>
+          <div class="c-form__field-ctn">
+            <input type="radio" name="rating" value="rating-3" id="rating-3" />
+            <label for="rating-3" class="c-form__field-ctn__label">3</label>
+          </div>
+          <div class="c-form__field-ctn">
+            <input type="radio" name="rating" value="rating-2" id="rating-2" />
+            <label for="rating-2" class="c-form__field-ctn__label">2</label>
+          </div>
+          <div class="c-form__field-ctn">
+            <input type="radio" name="rating" value="rating-1" id="rating-1" />
+            <label for="rating-1" class="c-form__field-ctn__label">1</label>
+          </div>
+        </fieldset>
+        <!-- Comments or suggestions -->
+        <fieldset class="c-form__section">
+          <legend class="c-form__section-title">Comments or suggestions</legend>
+          <div class="c-form__field-ctn">
+            <label for="comments-or-suggestions"
+              >Would you like to leave any comments or suggestions?</label
+            >
+            <textarea
+              class="c-form__field-ctn__field"
+              name="comments_or_suggestions"
+              id="comments-or-suggestions"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </fieldset>
+        <!-- Contact -->
+        <fieldset class="c-form__section">
+          <legend class="c-form__section-title">Contact</legend>
+          <div class="c-form__field-ctn">
+            <label for="dropdown">Would you like to be contacted?</label>
+            <select
+              class="c-form__field-ctn__field"
+              name="contact"
+              id="dropdown"
+              required
+            >
+              <option value="" selected disabled>Select an option</option>
+              <option value="contact_yes">Yes</option>
+              <option value="contact_no">No</option>
+            </select>
+          </div>
+        </fieldset>
+        <!-- Submit button -->
+        <div class="c-form__section">
+          <button class="c-form__submit-btn" id="submit" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
