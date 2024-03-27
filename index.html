@@ -30,8 +30,8 @@
       </header>
       <form class="c-form" id="survey-form" action="" method="post">
         <!-- Personal information -->
-        <fieldset class="c-form__section">
-          <legend class="c-form__section-title">Personal information</legend>
+        <section class="c-form__section" role="region" aria-labelledby="user-info">
+          <h2 class="c-form__section-title" id="user-info">Personal information</h2>
           <!-- First name -->
           <div class="c-form__field-ctn">
             <label for="first-name" class="c-form__field-ctn__label"
@@ -43,7 +43,7 @@
               name="first_name"
               id="first-name"
               inputmode="text"
-              placeholder="John"
+              placeholder="e.g. John"
             />
           </div>
           <!-- Last name -->
@@ -57,7 +57,7 @@
               name="name"
               id="name"
               inputmode="text"
-              placeholder="Doe"
+              placeholder="e.g. Doe"
               required
             />
           </div>
@@ -72,10 +72,11 @@
               name="email"
               id="email"
               inputmode="email"
-              placeholder="john.doe@example.com"
+              placeholder="e.g. john.doe@example.com"
               required
             />
           </div>
+          <!-- Age -->
           <div class="c-form__field-ctn">
             <label
               id="number-label"
@@ -91,70 +92,95 @@
               min="13"
               max="120"
               inputmode="numeric"
-              placeholder="37"
+              placeholder="e.g. 37"
             />
           </div>
-        </fieldset>
+        </section>
         <!-- Services -->
-        <fieldset class="c-form__section">
-          <legend class="c-form__section-title">Services</legend>
-          <p>Which services do you use?</p>
-          <!-- Service A -->
+        <section class="c-form__section c-survey__services" role="region" aria-labelledby="services">
+          <h2 class="c-form__section-title" id="services">Services</h2>
           <div class="c-form__field-ctn">
-            <input type="checkbox" id="service-a" value="service-a" />
-            <label for="service-a" class="c-form__field-ctn__label"
-              >Service A</label
-            >
+            <p>Which services do you use?</p>
+            <ul class="c-form__field-ctn__field c-survey-form__list">
+            <!-- Service A -->
+            <li class="c-survey-form__list-item">
+              <div class="c-form__field-ctn">
+                <input type="checkbox" id="service-a" name="service-a" />
+                <label for="service-a" class="c-form__field-ctn__label"
+                  >Service A</label
+                >
+              </div>
+            </li>
+            <!-- Service B -->
+            <li class="c-survey-form__list-item">
+              <div class="c-form__field-ctn">
+                <input type="checkbox" id="service-b" name="service-b" />
+                <label for="service-b" class="c-form__field-ctn__label"
+                  >Service B</label
+                >
+              </div>
+            </li>
+            <!-- Service C -->
+            <li class="c-survey-form__list-item">
+              <div class="c-form__field-ctn">
+                <input type="checkbox" id="service-c" name="service-c" />
+                <label for="service-c" class="c-form__field-ctn__label"
+                  >Service C</label
+                >
+              </div>
+            </li>
+            </ul>
           </div>
-          <!-- Service B -->
-          <div class="c-form__field-ctn">
-            <input type="checkbox" id="service-b" value="service-b" />
-            <label for="service-b" class="c-form__field-ctn__label"
-              >Service B</label
-            >
-          </div>
-          <!-- Service C -->
-          <div class="c-form__field-ctn">
-            <input type="checkbox" id="service-c" value="service-c" />
-            <label for="service-c" class="c-form__field-ctn__label"
-              >Service C</label
-            >
-          </div>
-        </fieldset>
+        </section>
         <!-- Rating -->
-        <fieldset class="c-form__section">
-          <legend class="c-form__section-title">Rating</legend>
-          <p>Which note would you give to our services?</p>
+        <section class="c-form__section" role="region" aria-labelledby="rating">
+          <h2 class="c-form__section-title" id="rating">Rating</h2>
           <div class="c-form__field-ctn">
-            <input
-              type="radio"
-              name="rating"
-              value="rating-5"
-              id="rating-5"
-              checked
-            />
-            <label for="rating-5" class="c-form__field-ctn__label">5</label>
+          <fieldset class="c-form__field-ctn__field" required>
+            <legend>Which note would you give to our services?</legend>
+            <ol class="c-form__field-ctn__field c-survey-form__list">
+              <!-- 1 -->
+              <li class="c-survey-form__list-item">
+                <div class="c-form__field-ctn">
+                  <input type="radio" name="rating" value="rating-1" id="rating-1" />
+                  <label for="rating-1" class="c-form__field-ctn__label">1</label>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li class="c-survey-form__list-item">
+                <div class="c-form__field-ctn">
+                  <input type="radio" name="rating" value="rating-2" id="rating-2" />
+                  <label for="rating-2" class="c-form__field-ctn__label">2</label>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li class="c-survey-form__list-item">
+                <div class="c-form__field-ctn">
+                  <input type="radio" name="rating" value="rating-3" id="rating-3" />
+                  <label for="rating-3" class="c-form__field-ctn__label">3</label>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li class="c-survey-form__list-item">
+                <div class="c-form__field-ctn">
+                  <input type="radio" name="rating" value="rating-4" id="rating-4" />
+                  <label for="rating-4" class="c-form__field-ctn__label">4</label>
+                </div>
+              </li>
+              <!-- 5 -->
+              <li class="c-survey-form__list-item">
+                <div class="c-form__field-ctn">
+                  <input type="radio" name="rating" value="rating-5" id="rating-5" />
+                  <label for="rating-5" class="c-form__field-ctn__label"    checked>5</label>
+                </div>
+              </li>
+            </ol>
+          </fieldset>
           </div>
-          <div class="c-form__field-ctn">
-            <input type="radio" name="rating" value="rating-4" id="rating-4" />
-            <label for="rating-4" class="c-form__field-ctn__label">4</label>
-          </div>
-          <div class="c-form__field-ctn">
-            <input type="radio" name="rating" value="rating-3" id="rating-3" />
-            <label for="rating-3" class="c-form__field-ctn__label">3</label>
-          </div>
-          <div class="c-form__field-ctn">
-            <input type="radio" name="rating" value="rating-2" id="rating-2" />
-            <label for="rating-2" class="c-form__field-ctn__label">2</label>
-          </div>
-          <div class="c-form__field-ctn">
-            <input type="radio" name="rating" value="rating-1" id="rating-1" />
-            <label for="rating-1" class="c-form__field-ctn__label">1</label>
-          </div>
-        </fieldset>
+        </section>
         <!-- Comments or suggestions -->
-        <fieldset class="c-form__section">
-          <legend class="c-form__section-title">Comments or suggestions</legend>
+        <section class="c-form__section" role="region" aria-labelledby="comments">
+          <h2 class="c-form__section-title" id="comments">Comments or suggestions</h2>
           <div class="c-form__field-ctn">
             <label for="comments-or-suggestions"
               >Would you like to leave any comments or suggestions?</label
@@ -167,10 +193,10 @@
               rows="10"
             ></textarea>
           </div>
-        </fieldset>
+        </section>
         <!-- Contact -->
-        <fieldset class="c-form__section">
-          <legend class="c-form__section-title">Contact</legend>
+        <section class="c-form__section" role="region" aria-labelledby="contact">
+          <h2 class="c-form__section-title" id="contact">Contact</h2>
           <div class="c-form__field-ctn">
             <label for="dropdown">Would you like to be contacted?</label>
             <select
@@ -184,7 +210,7 @@
               <option value="contact_no">No</option>
             </select>
           </div>
-        </fieldset>
+        </section>
         <!-- Submit button -->
         <div class="c-form__section">
           <button class="c-form__submit-btn" id="submit" type="submit">
